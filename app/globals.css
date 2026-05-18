@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  color: #1A2421;
+  background: #FBFAF5;
+}
+
+.font-serif { font-family: var(--font-serif); }
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ofnac-gold text-ofnac-green-900 px-5 py-3 rounded-lg font-semibold hover:brightness-95 transition;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-5 py-3 rounded-lg font-medium hover:bg-white/15 transition;
+  }
+  .btn-dark {
+    @apply inline-flex items-center gap-2 bg-ofnac-green-900 text-white px-5 py-3 rounded-lg font-semibold hover:bg-ofnac-green-800 transition;
+  }
+  .card {
+    @apply bg-white border border-ofnac-line rounded-xl;
+  }
+  .label-sm {
+    @apply text-xs uppercase tracking-[0.15em] font-semibold;
+  }
+}
+
+.institutional-content h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0A3D2E;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+.institutional-content h2:first-child { margin-top: 0; }
+.institutional-content p {
+  color: #4A5550;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  font-size: 1.0625rem;
+}
+.institutional-content strong { color: #1A2421; font-weight: 600; }
+.institutional-content ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  color: #4A5550;
+  line-height: 1.75;
+}
+.institutional-content ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
